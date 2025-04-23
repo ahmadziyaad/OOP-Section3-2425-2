@@ -18,12 +18,32 @@ public class ArrayLab {
         //Part A: Question 2
         int[] points = {90, 85, 88};
 
+        //Part B: Question 4
+        int[][] matrix = {  {1, 2, 3},
+                            {4, 5, 6},
+                            {7, 8, 9}
+                         };
+                         
+        //Part B: Question 5
+        ArrayList<Double> grades = new ArrayList<>();
+        
+        //Part B: Question 6
+        printAverage(new int[] {10, 20, 30, 40});
+
+        //Part C: Question 7, call highest score
+        int highest = findHighestScore(scores);
+        System.out.println("Highest score: " + highest);
+
         // 2D array for marks of 3 students and 3 subjects
         int[][] marks = {
             {85, 78, 90},
             {88, 92, 79},
             {75, 80, 85}
         };
+
+        //Part C: Question 9, call sumSubjectMarks
+        int totalMarks = sumSubjectMarks(marks);
+        System.out.println("Total marks of all subjects: " + totalMarks);
 
         // ArrayList of subjects
         ArrayList<String> subjects = new ArrayList<>();
@@ -37,10 +57,8 @@ public class ArrayLab {
         students[1] = new Student("Siti", 21);
         students[2] = new Student("Raj", 19);
 
-        // Display all student names
-        for (Student s : students) {
-            System.out.println("Student: " + s.getName() + ", Age: " + s.getAge());
-        }
+        //Part C: Question 8
+        printStudentInfo(students);
 
         input.close();
     }
@@ -48,6 +66,48 @@ public class ArrayLab {
     //Part A: Question 3
     public static void printTotal(String title, int... values) { 
     // ...
+    }
+
+    //Part B: Question 6, helper method to printAverage 
+    public static void printAverage(int[] numbers){
+        int sum=0;
+        
+        for(int n : numbers){
+            sum+=n;
+        }
+        double average = (double) sum / numbers.length;
+        System.out.println("Average: " + average);
+    }
+
+    //Part C: Question 7
+    public static int findHighestScore(int[] scores){
+        int highest = scores[0];
+        
+        for (int s : scores) {
+            if(s > highest){
+                highest = s;
+            }
+        }
+        return highest;
+    }
+    
+    //Part C: Question 8
+    public static void printStudentInfo(Student[] arr){
+        for (Student s: arr){
+            System.out.println("Student: " + s.getName() + ", Age: " + s.getAge());
+        }
+    }
+    
+    //Part C: Question 9
+    public static int sumSubjectMarks(int[][] marks){
+        int total = 0;
+        
+        for(int[] row : marks){
+            for(int mark : row){
+                total += mark;
+            }
+        }
+        return total;
     }
 }
 
