@@ -67,12 +67,15 @@
 
 ### 🎯 FINAL TIPS TO SHARE
 
-Topic | What to Master
-OOP | Constructors, methods, object use
-Arrays | Looping, comparisons, total calculations
-Enums | Fields, constructors, methods
-Wrapper Classes | Autoboxing, unboxing, manual conversions
-File Structure | package, import, and class organization
+
+| Topic | What to Master |
+|-------|----------------|
+| OOP | Constructors, methods, object use |
+| Arrays | Looping, comparisons, total calculations |
+| Enums | Fields, constructors, methods |
+| Wrapper Classes | Autoboxing, unboxing, manual conversions |
+| File Structure | `package`, `import`, and class organization |
+
 
 
 ### ✨ BONUS PREP TIPS
