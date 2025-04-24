@@ -16,6 +16,7 @@
 ---
 
 ### 📌 SECTION A: OBJECTIVE QUESTIONS (30 marks)
+
 **Tips for MCQs (2 marks each):**
 - Know the **difference between identifiers and reserved words** (`class` cannot be used as a variable name).
 - **Java is case-sensitive** – `Main` and `main` are different.
@@ -54,7 +55,25 @@
 - Proper use of `package` and `import` statements
 - Understand **file organization** and dependencies between classes in different packages
 
+#### ✴️ Question 3: Arrays, 2D Arrays, Classes
+- Loop through arrays, compare values
+- Sum column-wise to get totals
+- Use nested loops
+- Add elements from each array
+- Use constructor and methods
+- Count, create, and fill new array with average
+
 ---
+
+### 🎯 FINAL TIPS TO SHARE
+
+Topic	What to Master
+OOP	Constructors, methods, object use
+Arrays	Looping, comparisons, total calculations
+Enums	Fields, constructors, methods
+Wrapper Classes	Autoboxing, unboxing, manual conversions
+File Structure	package, import, and class organization
+
 
 ### ✨ BONUS PREP TIPS
 - **Write and test your own code snippets** — especially around string manipulation, arrays, and OOP.
