@@ -1,43 +1,75 @@
+public class Lab2 {
+    public static void main(String[] args) {
+
+        //Q1
+        Employee e1 = new Employee();
+        e1.setEmpNum(101);
+        e1.setEmpName("Ali");
+        System.out.println("Employee Number: " + e1.getEmpNum());
+        System.out.println("Employee Name: " + e1.getEmpName());
+
+        //Q3
+        Book b1 = new Book("Java 101","John Doe");
+        b1.display();
+
+        //Q6
+        new User();
+        new User();
+        System.out.println("Total Users: " + User.getUserCount());
+
+        //Q7
+        Employee e = new Employee();
+        e.setSalary(5000);
+        System.out.println("Salary:" + e.getSalary());
+    }
+}
+
 //Q1
 class Employee {
     private int empNum;
     private String empName;
-    private double  salary;
 
     public void setEmpNum(int num) {
         empNum = num;
     }
 
-    public void setEmpName(String name) {
-        empName = name;
-    }
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
     public int getEmpNum() {
         return empNum;
     }
+
+    public void setEmpName(String name) {
+        empName = name;
+    }
+
     public String getEmpName() {
         return empName;
     }
-    public double getSalary() {
+
+    //Q7
+    private int salary;
+
+    public void setSalary(int s) {
+        salary = s;
+    }
+
+    public int getSalary() {
         return salary;
     }
 }
 
-//Q2
+// Q2
 class Car {
     private String brand;
     private int year;
 
-    public void setBrand(String b) {
-        this.brand = b;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
+
     public int getYear() {
         return year;
     }
 }
-
 
 //Q3
 class Book {
@@ -45,8 +77,8 @@ class Book {
     private String author;
 
     public Book(String t, String a) {
-        this.title = t;
-        this.author = a;
+        title = t;
+        author = a;
     }
 
     public void display() {
@@ -62,7 +94,8 @@ class Student {
 
     public void setName(String name) {
         this.name = name;
-    }    
+    }
+
     public int getAge() {
         return age;
     }
@@ -71,7 +104,7 @@ class Student {
 //Q5
 class Message {
     public void display() {
-        System.out.println("Hello");
+        System.out.println("Hello!");
     }
 
     public void display(String msg) {
@@ -91,32 +124,3 @@ class User {
         return counter;
     }
 }
-
-
-// Main 
-public class Main {
-    public static void main(String[] args) {
-
-        // Task 1
-        Employee e1 = new Employee();
-        e1.setEmpNum(101);
-        e1.setEmpName("Ali");
-        System.out.println("Employee Number: " + e1.getEmpNum());
-        System.out.println("Employee Name : " + e1.getEmpName());
-
-        // Task 3
-        Book b1 = new Book("Java 101", "John Doe");
-        b1.display();
-
-        // Task 6
-        new User();
-        new User();
-        System.out.println("Total user: " + User.getUserCount());
-
-        
-        Employee e = new Employee();
-        e.setSalary(5000);
-        System.out.println("Salary: " + e.getSalary());
-    }
-}
-

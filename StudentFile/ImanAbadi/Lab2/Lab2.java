@@ -1,4 +1,4 @@
-public class LAB1 {
+public class Lab2 {
     public static void main(String[] args) {
         Employee e1 = new Employee();
         e1.setEmpNum(101);
@@ -13,7 +13,7 @@ public class LAB1 {
         new User();
         System.out.println("Total Users: " + User.getUserCount());
 
-        Employee_02 e = new Employee_02();
+        Employee e = new Employee();
         e.setSalary(5000);
         System.out.println("Salary: " + e.getSalary());
     }
@@ -21,25 +21,37 @@ public class LAB1 {
 
 class Employee {
     // TODO: Add fields
+    // TODO: Make salary private
     private int empNum;
     private String empName;
+    private float salary;
 
     // TODO: Add setter and getter methods
     public void setEmpNum(int num) {
-        empNum = num;
-    }
-
-    public int getEmpNum() {
-        return empNum;
+       empNum = num;
     }
 
     public void setEmpName(String name) {
         empName = name;
     }
 
+    public int getEmpNum() {
+        return empNum;
+    }
+
     public String getEmpName() {
         return empName;
     }
+
+    // TODO: Write setSalary() and getSalary() methods
+    public void setSalary(float s) {
+        salary = s;
+    }
+
+    public float getSalary() {
+        return salary;
+    }
+
 }
 
 class Car {
@@ -48,12 +60,12 @@ class Car {
     private int year;
 
     // TODO: Create setter for brand
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setBrand(String b){
+        brand = b;
     }
 
     // TODO: Create getter for year
-    public int getYear() {
+    public int getYear(){
         return year;
     }
 }
@@ -63,9 +75,9 @@ class Book {
     private String author;
 
     // TODO: Add a constructor
-    public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
+    public Book(String t, String a) {
+        title = t;
+        author = a;
     }
 
     public void display() {
@@ -79,11 +91,19 @@ class Student {
     private int age;
 
     // TODO: Implement setter for name
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String n) {
+        name = n;
     }
+    public void age(int a){
+        age = a;
+    }
+    
 
     // TODO: Implement getter for age
+    public String getName() {
+        return name;   
+    }
+
     public int getAge() {
         return age;
     }
@@ -103,7 +123,7 @@ class Message {
 
 class User {
     // TODO: Declare a static counter variable
-    private static int counter = 0;
+    static int counter = 0;
 
     public User() {
         // TODO: Increment counter
@@ -113,20 +133,6 @@ class User {
     public static int getUserCount() {
         // TODO: Return counter
         return counter;
-    }
-}
-
-class Employee_02 {
-    // TODO: Make salary private
-    private double salary;
-
-    // TODO: Write setSalary() and getSalary() methods
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public double getSalary() {
-        return salary;
     }
 }
 
